@@ -5,6 +5,7 @@
       "esnext",
       "DOM"
     ],
+    "downlevelIteration": true,
     "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
