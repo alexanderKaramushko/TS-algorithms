@@ -4,6 +4,8 @@ type Student = `${number} ${string}`;
 
 /**
  * @see {@link https://informatics.msk.ru/mod/statements/view.php?chapterid=111647#1}
+ * 
+ * ACCEPTED.
  */
 export function sortByClasses(students: Student[]) {
   const queue = new Queue<Student>(students);

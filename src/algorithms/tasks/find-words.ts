@@ -1,5 +1,7 @@
 /**
  * @see {@link https://leetcode.com/problems/keyboard-row/}
+ * 
+ * ACCEPTED.
  */
 
 function getRowIndex(symbol: string) {

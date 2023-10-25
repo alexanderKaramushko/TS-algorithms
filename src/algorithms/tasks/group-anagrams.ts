@@ -1,5 +1,7 @@
 /**
  * @see {@link https://leetcode.com/problems/group-anagrams/}
+ * 
+ * ACCEPTED.
  */
 
 export function groupAnagrams(strs: string[]): string[][] {

@@ -1,5 +1,7 @@
 /**
  * @see {@link https://leetcode.com/problems/power-of-four}
+ * 
+ * ACCEPTED.
  */
 
 export function isPowerOfFour(n: number): boolean {
