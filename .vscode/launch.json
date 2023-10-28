@@ -7,6 +7,7 @@
       "request": "launch",
       "runtimeExecutable": "node",
       "cwd": "${workspaceFolder}/src",
+      "console": "integratedTerminal",
       "runtimeArgs": [
         "--nolazy",
         "-r",
