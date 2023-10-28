@@ -1,4 +1,4 @@
-import { Queue } from "../queue";
+import { Queue } from "../../queue";
 
 type Student = `${number} ${string}`;
 
