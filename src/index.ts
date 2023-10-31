@@ -1,3 +1,1 @@
-import { collect } from "./algorithms/tasks/linear/collect";
-
-collect();
+// Файл для дебаггинга
