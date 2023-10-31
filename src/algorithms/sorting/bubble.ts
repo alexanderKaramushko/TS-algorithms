@@ -26,7 +26,5 @@ export function bubble(input: number[]) {
     }
   }
 
-  console.log(input)
-
   return input;
 }
