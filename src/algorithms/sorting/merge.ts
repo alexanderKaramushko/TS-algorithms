@@ -21,46 +21,48 @@
 // [] и[]
 // [2, 3, 6, 9]
 export function merge(input: number[]) {
-  if (input.length > 1) {
-    const middle = Math.floor(input.length / 2);
-    const left = input.slice(0, middle);
-    const right = input.slice(middle);
-
-    merge(left);
-    merge(right);
-
-    let leftIndex = 0;
-    let rightIndex = 0;
-    let inputIndex = 0;
-
-    while (leftIndex < left.length && rightIndex < right.length) {
-      const leftElement = left[leftIndex];
-      const rightElement = right[rightIndex];
-
-      if (leftElement <= rightElement) {
-        input[inputIndex] = leftElement;
-        leftIndex++;
-      } else {
-        input[inputIndex] = rightElement;
-        rightIndex++;
-      }
-
-      inputIndex++;
-    }
-
-    while (leftIndex < left.length) {
-      input[inputIndex] = left[leftIndex]
-      leftIndex++;
-      inputIndex++;
-    }
-
-    while (rightIndex < right.length) {
-      input[inputIndex] = right[rightIndex]
-      rightIndex++;
-      inputIndex++;
-    }
-
-    return input;
+  if (input.length <= 1) {
+    return;
   }
+
+  const middle = Math.floor(input.length / 2);
+  const left = input.slice(0, middle);
+  const right = input.slice(middle);
+
+  merge(left);
+  merge(right);
+
+  let leftIndex = 0;
+  let rightIndex = 0;
+  let inputIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    const leftElement = left[leftIndex];
+    const rightElement = right[rightIndex];
+
+    if (leftElement <= rightElement) {
+      input[inputIndex] = leftElement;
+      leftIndex++;
+    } else {
+      input[inputIndex] = rightElement;
+      rightIndex++;
+    }
+
+    inputIndex++;
+  }
+
+  while (leftIndex < left.length) {
+    input[inputIndex] = left[leftIndex]
+    leftIndex++;
+    inputIndex++;
+  }
+
+  while (rightIndex < right.length) {
+    input[inputIndex] = right[rightIndex]
+    rightIndex++;
+    inputIndex++;
+  }
+
+  return input;
 }
 
