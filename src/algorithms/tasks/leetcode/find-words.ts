@@ -3,7 +3,6 @@
  * 
  * ACCEPTED.
  */
-
 function getRowIndex(symbol: string) {
   const row1 = 'qwertyuiop';
   const row2 = 'asdfghjkl';

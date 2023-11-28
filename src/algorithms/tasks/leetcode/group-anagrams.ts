@@ -3,7 +3,6 @@
  * 
  * ACCEPTED.
  */
-
 export function groupAnagrams(strs: string[]): string[][] {
   const words: Record<string, string[]> = {}
 
