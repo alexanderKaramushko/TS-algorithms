@@ -62,3 +62,31 @@ export function recursiveMemoFib(n: number): number {
 
   return fib(n);
 };
+
+/**
+ * @see {@link https://education.yandex.ru/handbook/algorithms/article/zadachi-o-chislah-fibonachchi}
+ * 
+ * @description
+ * Найти последнюю цифру числа Фибоначчи
+ * 
+ * Во избежание переполнения сохраняется последовательность чисел по модулю 10
+ */
+export function lastFib(n: number): number {
+  const sequence = [];
+
+  let position = 1;
+  let f1 = 0;
+  let f2 = 1;
+
+  while (position < n) {
+    const sequenceMod = (f1 + f2) % 10;
+
+    sequence.push(sequenceMod);
+
+    f1 = f2;
+    f2 = sequenceMod;
+    position++;
+  }
+
+  return sequence[sequence.length - 1] % 10;
+};
