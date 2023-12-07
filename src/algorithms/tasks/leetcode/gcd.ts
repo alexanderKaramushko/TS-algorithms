@@ -58,3 +58,25 @@ export function fasterGCD(dividend1: number, dividend2: number): number {
 
   return fasterGCD(a, b);
 }
+
+/**
+ * euclideanGCD(10^9, 7)
+ * euclideanGCD(10^9, 10^9 mod 7)
+ * euclideanGCD(10^9, 1)
+ */
+export function euclideanGCD(dividend1: number, dividend2: number): number {
+  if (dividend1 === 0 || dividend2 === 0) {
+    return Math.max(dividend1, dividend2);
+  }
+
+  let a = dividend1;
+  let b = dividend2;
+
+  if (a > b) {
+    a = a % b
+  } else {
+    b = b % a;
+  }
+
+  return euclideanGCD(a, b);
+}
