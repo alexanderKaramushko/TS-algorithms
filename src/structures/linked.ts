@@ -1,11 +1,11 @@
 type NodeModel<T> = {
-  data: T;
+  value: T;
   next: NodeModel<T> | null
 }
 
-class Item<T> implements NodeModel<T> {
+export class ListNode<T> implements NodeModel<T> {
   constructor(
-    public data: T,
+    public value: T,
     public next: NodeModel<T> | null = null
   ) { }
 }
@@ -13,7 +13,7 @@ class Item<T> implements NodeModel<T> {
 type List<T> = {
   head: NodeModel<T> | null
   current: NodeModel<T> | null
-  toString: () => T[]
+  getValues: () => T[]
 }
 
 export class LinkedList<T> implements List<T> {
@@ -22,7 +22,10 @@ export class LinkedList<T> implements List<T> {
 
   public append(value: T) {
     if (!this.head) {
-      this.head = new Item(value) as NodeModel<T>;
+      this.head = new ListNode(value) as NodeModel<T>;
+      this.current = new ListNode(value);
+
+      return this.current;
     }
 
     this.current = this.head;
@@ -31,16 +34,35 @@ export class LinkedList<T> implements List<T> {
       this.current = this.current.next;
     }
 
-    this.current.next = new Item(value);
+    this.current.next = new ListNode(value);
+
+    return this.current.next;
   }
 
-  toString() {
+  public setNext(listNode: NodeModel<T>, next: NodeModel<T>) {
+    if (!this.head) {
+      this.head = listNode;
+    }
+
+    this.current = this.head;
+
+    while (this.current) {
+      if (this.current === listNode) {
+        this.current.next = next;
+        break;
+      }
+
+      this.current = this.current.next;
+    }
+  }
+
+  getValues() {
     const values = [];
     let current = this.head;
 
     while (current?.next !== null) {
       current = current?.next ?? null
-      values.push(current?.data);
+      values.push(current?.value);
     }
 
     return values as T[];
