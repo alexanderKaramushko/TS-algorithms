@@ -1,4 +1,4 @@
-type NodeModel<T> = {
+export type NodeModel<T> = {
   value: T;
   next: NodeModel<T> | null
 }
@@ -23,7 +23,7 @@ export class LinkedList<T> implements List<T> {
   public append(value: T) {
     if (!this.head) {
       this.head = new ListNode(value) as NodeModel<T>;
-      this.current = new ListNode(value);
+      this.current = this.head;
 
       return this.current;
     }
@@ -60,9 +60,9 @@ export class LinkedList<T> implements List<T> {
     const values = [];
     let current = this.head;
 
-    while (current?.next !== null) {
-      current = current?.next ?? null
+    while (current) {
       values.push(current?.value);
+      current = current.next
     }
 
     return values as T[];
