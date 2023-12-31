@@ -1,14 +1,12 @@
 export class Stack<T> {
-  constructor(private items: T[]) { }
+  constructor(private items: T[] = []) { }
 
   push(item: T) {
     this.items.push(item);
   }
 
   pop() {
-    const last = this.items.pop();
-
-    return last;
+    return this.items.pop();
   }
 
   peek() {
