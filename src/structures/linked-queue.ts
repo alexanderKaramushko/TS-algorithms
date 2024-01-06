@@ -1,7 +1,7 @@
 import { ListNode, NodeModel } from "./linked";
 
 /**
- * @description Реализация очереди на основе связного списка
+ * @description Реализация очереди на основе связного списка.
  */
 export class LinkedQueue<T> {
   private _size = 0
@@ -38,6 +38,10 @@ export class LinkedQueue<T> {
     }
 
     return temp;
+  }
+
+  peek() {
+    return this.front?.value;
   }
 
   size() {
