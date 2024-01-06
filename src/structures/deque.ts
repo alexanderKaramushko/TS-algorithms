@@ -1,5 +1,5 @@
 export class Deque<T> {
-  constructor(private items: T[]) { }
+  constructor(private items: T[] = []) { }
 
   enqueueFirst(item: T) {
     this.items = [item, ...this.items];
