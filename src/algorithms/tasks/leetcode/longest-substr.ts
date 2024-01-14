@@ -42,5 +42,3 @@ export function longestSubstr(s: string) {
 
   return max;
 }
-
-// abacqcdabcbb
