@@ -1,4 +1,4 @@
-import { BinaryTreeNode } from "../../tree";
+import { BinaryTree } from "../../tree";
 
 type Order = 'preorder' | 'inorder' | 'postorder';
 
@@ -10,10 +10,10 @@ type Order = 'preorder' | 'inorder' | 'postorder';
  * inorder – выполнение операции на узле после окончания обхода по left
  * postorder – выполнение операции на узле после обхода потомков узла
  */
-export function dfs(root: BinaryTreeNode<number>, order: Order = 'preorder') {
+export function dfs(root: BinaryTree<number>, order: Order = 'preorder') {
   const values: (number | string)[] = [];
 
-  function traverse(root: BinaryTreeNode | null) {
+  function traverse(root: BinaryTree<number> | null) {
     if (!root) {
       return root;
     }
