@@ -1,0 +1,22 @@
+{
+  "task": {
+    "scope": "typescript",
+    "prefix": [
+      "tsk",
+      "Create task template"
+    ],
+    "body": [
+      "/**",
+      " * @see {@link https://example.com}",
+      " *",
+      " *",
+      " * @description",
+      " */",
+      "export function task(input: unknown) {",
+      "",
+      "}",
+      "",
+    ],
+    "description": "Algorithm task function"
+  }
+}
