@@ -12,7 +12,7 @@
       " *",
       " * @description",
       " */",
-      "export function task(input: unknown) {",
+      "export function ${TM_FILENAME_BASE/-([a-z])/${1:/upcase}/g}(input: unknown) {",
       "",
       "}",
       "",
