@@ -1,5 +1,5 @@
 export class Queue<T> {
-  constructor(private items: T[]) { }
+  constructor(private items: T[] = []) { }
 
   enqueue(item: T) {
     this.items = [item, ...this.items];
