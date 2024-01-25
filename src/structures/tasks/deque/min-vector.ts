@@ -1,4 +1,4 @@
-import { Deque } from "../../deque";
+import { Deque } from "../../queue/deque";
 
 /**
  * @see {@link https://informatics.msk.ru/mod/statements/view.php?chapterid=756#1}

@@ -1,4 +1,4 @@
-import { Stack } from "../../stack";
+import { Stack } from "../../stack/stack";
 
 /**
  * @see {@link https://informatics.msk.ru/mod/statements/view.php?chapterid=1915#1}

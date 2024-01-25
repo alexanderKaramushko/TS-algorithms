@@ -1,4 +1,4 @@
-import { Stack } from "../../stack";
+import { Stack } from "../../stack/stack";
 
 /**
  * @description Выкупить | Сумма | Максимальная сумма | Кол-во для выкупа самого ценного

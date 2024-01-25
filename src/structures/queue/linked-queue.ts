@@ -1,4 +1,4 @@
-import { ListNode, NodeModel } from "./linked";
+import { ListNode, NodeModel } from "../linked";
 
 /**
  * @description Реализация очереди на основе связного списка.

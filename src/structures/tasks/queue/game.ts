@@ -1,4 +1,4 @@
-import { LinkedQueue } from "../../linked-queue";
+import { LinkedQueue } from "../../queue/linked-queue";
 
 type Card = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 

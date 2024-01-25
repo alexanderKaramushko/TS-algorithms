@@ -2,7 +2,7 @@
  * @see {@link https://informatics.msk.ru/mod/statements/view.php?chapterid=112984#1}
  */
 
-import { Deque } from "../../deque";
+import { Deque } from "../../queue/deque";
 
 /**
  * @description

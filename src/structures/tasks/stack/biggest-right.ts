@@ -1,4 +1,4 @@
-import { Stack } from "../../stack";
+import { Stack } from "../../stack/stack";
 
 /**
  * @see {@link http://ulivt.ru:8082/ru/problem-pid-c5a4}

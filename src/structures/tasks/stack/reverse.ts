@@ -1,4 +1,4 @@
-import { Stack } from "../../stack";
+import { Stack } from "../../stack/stack";
 
 /**
  * @description Реверсирование строки с помощью стека.

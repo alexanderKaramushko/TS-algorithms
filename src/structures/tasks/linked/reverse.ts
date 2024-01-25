@@ -1,5 +1,5 @@
 import { LinkedList, NodeModel } from "../../linked";
-import { Stack } from "../../stack";
+import { Stack } from "../../stack/stack";
 
 /**
  * @see {@link https://leetcode.com/problems/reverse-linked-list}

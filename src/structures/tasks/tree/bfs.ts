@@ -1,4 +1,4 @@
-import { LinkedQueue } from "../../linked-queue";
+import { LinkedQueue } from "../../queue/linked-queue";
 import { BinaryTree } from "../../tree";
 
 /**
