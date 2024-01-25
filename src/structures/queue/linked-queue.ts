@@ -1,9 +1,10 @@
 import { ListNode, NodeModel } from "../linked";
+import { AbstractQueue } from "./abstract";
 
 /**
  * @description Реализация очереди на основе связного списка.
  */
-export class LinkedQueue<T> {
+export class LinkedQueue<T> implements AbstractQueue<T> {
   private _size = 0
   private front: NodeModel<T> | null = null
   private rear: NodeModel<T> | null = null

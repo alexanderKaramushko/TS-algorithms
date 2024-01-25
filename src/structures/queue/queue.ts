@@ -1,4 +1,6 @@
-export class Queue<T> {
+import { AbstractQueue } from "./abstract";
+
+export class Queue<T> implements AbstractQueue<T> {
   constructor(private items: T[] = []) { }
 
   enqueue(item: T) {
