@@ -37,5 +37,5 @@ export function dfs(root: BinaryTree<number>, order: Order = 'preorder') {
 
   traverse(root);
 
-  return values
+  return values;
 }
