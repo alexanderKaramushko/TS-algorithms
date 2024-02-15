@@ -1,8 +1,14 @@
+import { Stack } from "../../stack/stack";
+
 type Island = "1"
 type Water = "0"
 
 /**
  * @see {@link https://leetcode.com/problems/number-of-islands/description}
+ * 
+ * Асимптотическая сложность: так как кол-во ребер каждого узла ограниченно
+ * числом 4 ((row - 1, col), (row, col - 1), (row + 1, col), (row, col + 1)),
+ * то сложность O(n), которая состоит из row*col.
  * 
  * 1. Создать 2D массив seen для записи посещенных узлов,
  *    например, [[true, true, false], [true, false, true]]
@@ -50,3 +56,25 @@ export function findIslands(items: Array<(Island | Water)[]>) {
 
   return islands;
 }
+
+/**
+ * @description Вариант с итеративным обходом графа
+ */
+// function iterativeDfs(startRow: number, startCol: number) {
+//   const stack = new Stack<number[]>([[startRow, startCol]]);
+//   const directions = [[0, -1], [0, 1], [1, 0], [-1, 0]];
+
+//   while (stack.size() > 0) {
+//     const [row, col] = stack.pop() as number[];
+
+//     for (const [y, x] of directions) {
+//       const nextRow = row + y;
+//       const nextCol = col + x;
+
+//       if (isValid(nextRow, nextCol) && !seen[nextRow][nextCol]) {
+//         seen[nextRow][nextCol] = true;
+//         stack.push([nextRow, nextCol])
+//       }
+//     }
+//   }
+// }
