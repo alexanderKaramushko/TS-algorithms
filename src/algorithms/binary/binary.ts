@@ -7,6 +7,7 @@ export function binary(arr: number[], target: number) {
 
   while (left < right) {
     let mid = Math.floor((left + right) / 2);
+
     if (arr[mid] > target) {
       right = mid;
     } else {
@@ -26,6 +27,7 @@ export function binaryLeft(arr: number[], target: number) {
 
   while (left < right) {
     let mid = Math.floor((left + right) / 2);
+
     if (arr[mid] >= target) {
       right = mid;
     } else {
@@ -45,6 +47,7 @@ export function binaryRight(arr: number[], target: number) {
 
   while (left < right) {
     let mid = Math.floor((left + right) / 2);
+
     if (arr[mid] > target) {
       right = mid;
     } else {
