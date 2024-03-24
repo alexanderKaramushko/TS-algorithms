@@ -1,7 +1,7 @@
 /**
  * @see {@link https://leetcode.com/problems/min-cost-climbing-stairs/description}
  * 
- * @description Top-down подход.
+ * @description Top-down подход, размер состояния DP: 1D.
  * 
  * 1. Рассчитать стоимость текущей первой ступеньки:
  *  предыдущая сумма первых ступенек + стоимость[предыдущий индекс первой ступеньки]
@@ -45,7 +45,7 @@ export function minCostSteps(cost: number[]) {
 /**
  * @see {@link https://leetcode.com/problems/min-cost-climbing-stairs/description}
  * 
- * @description Bottom-up подход.
+ * @description Bottom-up подход. Размер состояния DP: 1D.
  */
 export function minCostStepsBottomUp(cost: number[]) {
   let n = cost.length;
