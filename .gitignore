@@ -15,3 +15,5 @@ yarn-debug.log*
 yrn-error.log*
 yarn-error.log
 .yarn/cache
+
+.history
